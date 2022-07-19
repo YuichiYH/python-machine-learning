@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 from PIL import Image
 
 image = Image.open("testImages/test.png")
@@ -79,7 +78,8 @@ def printImage(image):
 W1, b1, W2, b2 = init_params()
 
 image = np.array(image)
-image = np.argmax(image, 2) / 3
+image = np.argmax(image, 2)
+image = np.minimum(image, 1)
 
 printImage(image.tolist())
 
