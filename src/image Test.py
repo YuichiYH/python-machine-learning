@@ -2,6 +2,7 @@ import numpy as np
 from PIL import Image
 
 image = Image.open("testImages/test.png")
+image = image.resize((28,28))
 # image.show()
 # data = pd.read_csv('data/mnist_test.csv')
 
